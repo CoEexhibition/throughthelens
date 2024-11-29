@@ -2,8 +2,9 @@
 <html>
 <body>
 
-<audio id="myAudio" controls autoplay>
+<audio id="myAudio" controls autoplay muted>
   <source src="audio/speechEN.mp3" type="audio/mp3">
+<source src="audio/speechEN.wav" type="audio/wav">
   Your browser does not support the audio element.
 </audio>
 
@@ -11,10 +12,11 @@
 
 window.onload = function() {
 	var audio = document.getElementById('myAudio');
+	audio.muted = false;
 	audio.play().catch(function(error) {
-		console.log("Autoplay was blocked, attempt to play manually."
+		console.log("Autoplay was blocked, attempt to play manually.");
 });
-}
+};
 
 </script>
 
